@@ -1,0 +1,33 @@
+### Task1
+import random
+numb = int(input("Write number: "))
+rand = random.randint(1,10)
+if numb == rand:
+    print("Correct!",rand)
+else:
+    print("No",rand)
+### Task2
+
+name = str(input("Please, write your name: "))
+age  = int(input("Please, write your age: "))+1
+print("Hello, "+name+", on your next birthday you’ll be "+str(age)+" years")
+
+### Task3
+import random
+def generate_random_string(length):
+    letters = str(input("Please, say an interesting phrase: "))
+    rand_string = ''.join(random.choice(letters) for i in range(length))
+    rand_string2 = ''.join(random.choice(letters) for i in range(length))
+    rand_string3 = ''.join(random.choice(letters) for i in range(length))
+    rand_string4 = ''.join(random.choice(letters) for i in range(length))
+    rand_string5 = ''.join(random.choice(letters) for i in range(length))
+    print("Random string of length", length, "is:", [rand_string,rand_string2,rand_string3,rand_string4,rand_string5])
+generate_random_string(5)
+### Task4
+task = "2+2"
+answer = int(input("Write a answer to question "+task+": "))
+task = 4
+if answer != task:
+    print("Uncorrect")
+else:
+    print("Correct")
