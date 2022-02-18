@@ -1,0 +1,48 @@
+"""
+1. Реалізувати функцію eucledian_gcd(a, b), яка обраховуватиме найбільший спільний дільник для агрументів a та b
+за алгоритмом Евкліда. Функція має приймати два цілих числа як аргументи, і повертати результат обчислення
+як ціле число. Додатковим плюсом буде наявність перевірки типу аргументів: якщо аргументи не є цілими числами,
+виконання переривається з ValueError.
+Алгоритм Евкліда для пошуку НСД:
+     Допоки a != b:
+        - якщо a > b, то a = a - b
+        - якщо b > a, то b = b - a
+    Коли a == b, повертаємо а, яке і буде найбільшим спільним дільником.
+"""
+"""Variant 1
+
+a = int(input("Write number A: "))
+b = int(input("Write number B: "))
+def eucledian_gcd(a, b):
+    while a != 0 and b != 0:
+        if a >= b:
+            a %= b
+        else:
+            b %= a
+    return a or b
+
+if __name__ == "__main__":
+    eucledian_gcd(a, b)
+    print(f"For numbers {a} and {b} gcd = {eucledian_gcd(a, b)}")
+"""
+"""Variant 2
+
+import math
+a = int(input("Write number A: "))
+b = int(input("Write number B: "))
+print(f"For numbers {a} and {b}: gcd = {math.gcd(a, b)}")
+"""
+
+a = int(input("Write number A: "))
+b = int(input("Write number B: "))
+def eucledian_gcd(a, b):
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    return a or b
+if __name__ == "__main__":
+    eucledian_gcd(a, b)
+
+    print(f"For numbers {a} and {b}: gcd = {eucledian_gcd(a, b)}")
